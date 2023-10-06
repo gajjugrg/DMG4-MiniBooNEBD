@@ -7,12 +7,7 @@
 #include "G4RunManager.hh"
 #include "G4LogicalVolume.hh"
 #include "G4Track.hh"
-// version dependent header files
-#if G4VERSION_NUMBER != 1100
-#include "g4root.hh" // for G4_10
-#else
 #include "G4AnalysisManager.hh" // for G4_11
-#endif
 
 #include "DarkMatter.hh"
 

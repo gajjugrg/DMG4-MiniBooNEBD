@@ -9,5 +9,6 @@
 /control/verbose 0
 /run/verbose 0
 /tracking/verbose 0
-/gun/energy 100 GeV
-/run/beamOn 1000
+/gun/particle proton
+/gun/energy 8 GeV
+/run/beamOn 100000
