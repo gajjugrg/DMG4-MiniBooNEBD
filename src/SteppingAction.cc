@@ -31,6 +31,12 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
         if (procName.find(std::string("DMProcessDMBrem")) != std::string::npos){
             auto secondary = step -> GetSecondaryInCurrentStep();
             G4int parentID = track->GetDefinition()->GetPDGEncoding();
+            auto p_pMass = track->GetDefinition()->GetPDGMass();
+            auto p_px = track->GetMomentum().x();
+            auto p_py = track->GetMomentum().y();
+            auto p_pz = track->GetMomentum().z();
+            auto p_kEne = track->GetKineticEnergy();
+
             size_t size_secondary = (*secondary).size();
             if (size_secondary) {
                 for (size_t i = 0; i <(size_secondary); i++){
@@ -42,13 +48,19 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
                     auto  py = secstep-> GetMomentum().y();
                     auto pz = secstep-> GetMomentum().z();
                     analysisManager->FillNtupleIColumn(0, parentID);
-                    analysisManager->FillNtupleIColumn(1, pID);
-                    analysisManager->FillNtupleDColumn(2, px/CLHEP::MeV);
-                    analysisManager->FillNtupleDColumn(3, py/CLHEP::MeV);
-                    analysisManager->FillNtupleDColumn(4, pz/CLHEP::MeV);
-                    analysisManager->FillNtupleDColumn(5, kEne/CLHEP::MeV);
-                    analysisManager->FillNtupleDColumn(6, pMass/CLHEP::MeV);
-                    analysisManager->FillNtupleSColumn(7, procName);
+                    analysisManager->FillNtupleIColumn(1, pID);                 
+                    analysisManager->FillNtupleDColumn(2, p_px/CLHEP::MeV);
+                    analysisManager->FillNtupleDColumn(3, p_py/CLHEP::MeV);
+                    analysisManager->FillNtupleDColumn(4, p_pz/CLHEP::MeV);
+                    analysisManager->FillNtupleDColumn(5, p_kEne/CLHEP::MeV);
+                    analysisManager->FillNtupleDColumn(6, p_pMass/CLHEP::MeV);
+
+                    analysisManager->FillNtupleDColumn(7, px/CLHEP::MeV);
+                    analysisManager->FillNtupleDColumn(8, py/CLHEP::MeV);
+                    analysisManager->FillNtupleDColumn(9, pz/CLHEP::MeV);
+                    analysisManager->FillNtupleDColumn(10, kEne/CLHEP::MeV);
+                    analysisManager->FillNtupleDColumn(11, pMass/CLHEP::MeV);
+                    analysisManager->FillNtupleSColumn(12, procName);
                     analysisManager->AddNtupleRow();
                 }
             }

@@ -34,14 +34,14 @@ bool DarkMatterPhysics::DarkMatterPhysicsConfigure()
 
   DMpar->RegisterNewParam("BiasSigmaFactor0", 1e7);
   //DMpar->RegisterNewParam("EThresh", 35.); // for sensitivity calculations invisible mode
-  DMpar->RegisterNewParam("EThresh", 100.*MeV);
+  DMpar->RegisterNewParam("EThresh", 030.*MeV);
   //G4double EThresh = 18; // for sen10sitivity calculations visible mode
   //G4double EThresh = 1.; // for shape studies
   //G4double EThresh = 2000.; // to turn off A emissions
 
   //select particle type and details
   DMpar->RegisterNewParam("DMProcessType", 1.); // 1: Vector, 2: Scalar, 3: Axial, 4: Pseudoscalar 5: spin 2, 21: ALP
-  DMpar->RegisterNewParam("DMMass", 0.060*GeV); // Mass = 30 Mev  
+  DMpar->RegisterNewParam("DMMass", 0.030*GeV); // Mass = 30 Mev  
   DMpar->RegisterNewParam("Epsilon", 0.001); // default 0.1
 
   // Initialize for Iron (Fe)

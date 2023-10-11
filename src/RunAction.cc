@@ -27,6 +27,11 @@ RunAction::RunAction()
     analysisManager->CreateNtuple("brem", "dark photon bremsstrahlung in Fe");
     analysisManager->CreateNtupleIColumn("parentID");
     analysisManager->CreateNtupleIColumn("pID");
+    analysisManager->CreateNtupleDColumn("p_px");
+    analysisManager->CreateNtupleDColumn("p_py");
+    analysisManager->CreateNtupleDColumn("p_pz");
+    analysisManager->CreateNtupleDColumn("p_kEne");
+    analysisManager->CreateNtupleDColumn("p_Mass");
     analysisManager->CreateNtupleDColumn("px");
     analysisManager->CreateNtupleDColumn("py");
     analysisManager->CreateNtupleDColumn("pz");
@@ -52,6 +57,11 @@ RunAction::RunAction(const G4String* outputFileName)
     analysisManager->CreateNtuple("brem", "dark photon bremsstrahlung in Fe");
     analysisManager->CreateNtupleIColumn("parentID");
     analysisManager->CreateNtupleIColumn("pID");
+    analysisManager->CreateNtupleDColumn("p_px");
+    analysisManager->CreateNtupleDColumn("p_py");
+    analysisManager->CreateNtupleDColumn("p_pz");
+    analysisManager->CreateNtupleDColumn("p_kEne");
+    analysisManager->CreateNtupleDColumn("p_Mass");
     analysisManager->CreateNtupleDColumn("px");
     analysisManager->CreateNtupleDColumn("py");
     analysisManager->CreateNtupleDColumn("pz");
