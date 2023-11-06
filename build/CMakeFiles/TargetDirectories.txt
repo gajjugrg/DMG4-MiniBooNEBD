@@ -1,0 +1,7 @@
+/cluster/home/ggurung/DMG4-MiniBooNEBD/build/CMakeFiles/Brem.dir
+/cluster/home/ggurung/DMG4-MiniBooNEBD/build/CMakeFiles/edit_cache.dir
+/cluster/home/ggurung/DMG4-MiniBooNEBD/build/CMakeFiles/rebuild_cache.dir
+/cluster/home/ggurung/DMG4-MiniBooNEBD/build/CMakeFiles/list_install_components.dir
+/cluster/home/ggurung/DMG4-MiniBooNEBD/build/CMakeFiles/install.dir
+/cluster/home/ggurung/DMG4-MiniBooNEBD/build/CMakeFiles/install/local.dir
+/cluster/home/ggurung/DMG4-MiniBooNEBD/build/CMakeFiles/install/strip.dir

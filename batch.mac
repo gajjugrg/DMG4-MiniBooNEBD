@@ -1,14 +1,11 @@
-
 # Macro file 
 # To be run preferably in batch, without graphics:
 # % Brem batch.mac
-#
-/run/numberOfThreads 10
+/run/numberOfThreads 1
 /run/initialize
-#
 /control/verbose 0
 /run/verbose 0
 /tracking/verbose 0
 /gun/particle proton
 /gun/energy 8 GeV
-/run/beamOn 100000
+/run/beamOn 1

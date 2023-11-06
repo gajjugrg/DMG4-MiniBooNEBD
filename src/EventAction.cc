@@ -7,7 +7,7 @@
 #include "DarkMatter.hh"
 #include "DetectorConstruction.hh"
 
-#include "G4AnalysisManager.hh"  // G4_11
+#include "g4root.hh"  // G4_11
 
 #include "G4UnitsTable.hh"
 

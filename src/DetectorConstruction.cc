@@ -28,10 +28,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
     G4NistManager* nist = G4NistManager::Instance();
 
     // Envelope parameters
-    //
     G4double env_sizeXY = 4*m, env_sizeZ = 4.21*m;
     G4Material* env_mat = nist->FindOrBuildMaterial("G4_Fe");
-    //  G4Material* env_mat = new G4Material("Graphite", 6., 12.0107*(g/mole), 2.5*g/cm3);
     G4cout << "DetectorConstruction::A() " << env_mat->GetA()/(g/mole) << G4endl;
     G4cout << "DetectorConstruction::Z() " << env_mat->GetZ() << G4endl;
     G4cout << "DetectorConstruction::Density() " << env_mat->GetDensity()/(g/cm3) << G4endl;
