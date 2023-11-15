@@ -7,7 +7,11 @@
 #include "DarkMatter.hh"
 #include "DetectorConstruction.hh"
 
-#include "g4root.hh"  // G4_11
+#if G4VERSION != 1100
+#include "g4root.hh"
+#else
+#include "G4AnalysisManager.hh"
+#endif
 
 #include "G4UnitsTable.hh"
 

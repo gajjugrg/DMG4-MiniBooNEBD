@@ -5,7 +5,12 @@
 #include "globals.hh"
 #include "G4Version.hh"
 
-#include "g4root.hh" 
+#if G4VERSION != 1100
+#include "g4root.hh"
+#else
+#include "G4AnalysisManager.hh"
+#endif
+
 class G4Run;
 
 class RunAction : public G4UserRunAction

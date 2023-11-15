@@ -7,7 +7,12 @@
 #include "G4RunManager.hh"
 #include "G4LogicalVolume.hh"
 #include "G4Track.hh"
+
+#if G4VERSION != 1100
 #include "g4root.hh"
+#else
+#include "G4AnalysisManager.hh"
+#endif
 
 #include "DarkMatter.hh"
 
