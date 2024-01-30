@@ -55,19 +55,19 @@ RunAction::RunAction(const G4String* outputFileName)
     analysisManager->SetNtupleMerging(true);
     // Creating ntuple
     analysisManager->CreateNtuple("brem", "dark photon bremsstrahlung in Fe");
-    analysisManager->CreateNtupleIColumn("parentID");
-    analysisManager->CreateNtupleIColumn("pID");
-    analysisManager->CreateNtupleDColumn("p_px");
-    analysisManager->CreateNtupleDColumn("p_py");
-    analysisManager->CreateNtupleDColumn("p_pz");
-    analysisManager->CreateNtupleDColumn("p_kEne");
-    analysisManager->CreateNtupleDColumn("p_Mass");
-    analysisManager->CreateNtupleDColumn("px");
-    analysisManager->CreateNtupleDColumn("py");
-    analysisManager->CreateNtupleDColumn("pz");
-    analysisManager->CreateNtupleDColumn("kEne");
-    analysisManager->CreateNtupleDColumn("pMass");
-    analysisManager->CreateNtupleSColumn("ProcName");
+    analysisManager->CreateNtupleIColumn("parentID"); //0
+    analysisManager->CreateNtupleIColumn("pID"); //1
+    analysisManager->CreateNtupleDColumn("p_px"); //2
+    analysisManager->CreateNtupleDColumn("p_py"); //3
+    analysisManager->CreateNtupleDColumn("p_pz"); //4
+    analysisManager->CreateNtupleDColumn("p_kEne"); //5
+    analysisManager->CreateNtupleDColumn("p_Mass"); //6
+    analysisManager->CreateNtupleDColumn("px"); //7
+    analysisManager->CreateNtupleDColumn("py"); //8
+    analysisManager->CreateNtupleDColumn("pz"); //9
+    analysisManager->CreateNtupleDColumn("kEne"); //10
+    analysisManager->CreateNtupleDColumn("pMass"); //11
+    analysisManager->CreateNtupleSColumn("ProcName"); //12
     analysisManager->FinishNtuple();
 }
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -85,7 +85,7 @@ void RunAction::BeginOfRunAction(const G4Run*)
     if (fOutputFileNamePtr == nullptr)
     {
         //single file mode
-        G4String fileName = "bremOutput.root";
+        G4String fileName = "bremOutput";
         G4cout << "Single File Mode: Setting the output file name: " << fileName << G4endl;
         analysisManager->SetFileName(fileName);
     }

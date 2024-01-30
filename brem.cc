@@ -100,7 +100,7 @@ int main(int argc,char** argv)
 
     // Modified Physics List!!!
     G4PhysListFactory factory;
-    G4VModularPhysicsList * phys = factory.GetReferencePhysList("QGSP_BERT");
+    G4VModularPhysicsList * phys = factory.GetReferencePhysList("FTFP_BERT");
     DarkMatterPhysics* darkMatterPhysics = new DarkMatterPhysics();
     DarkMatterParametersFactory* DMpar = DarkMatterParametersFactory::GetInstance();
     G4cout << "BiasSigmaFactor0 = " << DMpar->GetRegisteredParam("BiasSigmaFactor0") << G4endl;

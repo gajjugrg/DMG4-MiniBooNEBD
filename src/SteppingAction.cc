@@ -13,7 +13,7 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-    SteppingAction::SteppingAction(EventAction* myEA)
+SteppingAction::SteppingAction(EventAction* myEA)
 : eventAction(myEA)
 {
     eventAction->SetSteppingAction(this);
@@ -44,17 +44,16 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
                     auto kEne = secstep->GetKineticEnergy();
                     G4int pID = secstep->GetDefinition()->GetPDGEncoding();
                     auto pMass = secstep->GetDefinition()->GetPDGMass();
-                    auto  px = secstep-> GetMomentum().x();
-                    auto  py = secstep-> GetMomentum().y();
+                    auto px = secstep-> GetMomentum().x();
+                    auto py = secstep-> GetMomentum().y();
                     auto pz = secstep-> GetMomentum().z();
                     analysisManager->FillNtupleIColumn(0, parentID);
-                    analysisManager->FillNtupleIColumn(1, pID);                 
+                    analysisManager->FillNtupleIColumn(1, pID);
                     analysisManager->FillNtupleDColumn(2, p_px/CLHEP::MeV);
                     analysisManager->FillNtupleDColumn(3, p_py/CLHEP::MeV);
                     analysisManager->FillNtupleDColumn(4, p_pz/CLHEP::MeV);
                     analysisManager->FillNtupleDColumn(5, p_kEne/CLHEP::MeV);
                     analysisManager->FillNtupleDColumn(6, p_pMass/CLHEP::MeV);
-
                     analysisManager->FillNtupleDColumn(7, px/CLHEP::MeV);
                     analysisManager->FillNtupleDColumn(8, py/CLHEP::MeV);
                     analysisManager->FillNtupleDColumn(9, pz/CLHEP::MeV);
