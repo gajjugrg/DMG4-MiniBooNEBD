@@ -65,6 +65,7 @@ set(Brem_SCRIPTS
   Brem.out
   init_vis.mac
   vis.mac
+  batch.mac
   )
 
 foreach(_script ${Brem_SCRIPTS})

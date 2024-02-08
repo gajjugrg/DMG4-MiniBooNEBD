@@ -25,19 +25,20 @@ RunAction::RunAction()
     analysisManager->SetNtupleMerging(true);
     // Creating ntuple
     analysisManager->CreateNtuple("brem", "dark photon bremsstrahlung in Fe");
+    analysisManager->CreateNtupleIColumn("Dummy");
     analysisManager->CreateNtupleIColumn("parentID");
     analysisManager->CreateNtupleIColumn("pID");
+    analysisManager->CreateNtupleSColumn("ProcName");
     analysisManager->CreateNtupleDColumn("p_px");
     analysisManager->CreateNtupleDColumn("p_py");
     analysisManager->CreateNtupleDColumn("p_pz");
-    analysisManager->CreateNtupleDColumn("p_kEne");
+    analysisManager->CreateNtupleDColumn("p_kinEne");
     analysisManager->CreateNtupleDColumn("p_Mass");
     analysisManager->CreateNtupleDColumn("px");
     analysisManager->CreateNtupleDColumn("py");
     analysisManager->CreateNtupleDColumn("pz");
-    analysisManager->CreateNtupleDColumn("kEne");
+    analysisManager->CreateNtupleDColumn("kinEne");
     analysisManager->CreateNtupleDColumn("pMass");
-    analysisManager->CreateNtupleSColumn("ProcName");
     analysisManager->FinishNtuple();
 }
 
@@ -55,19 +56,20 @@ RunAction::RunAction(const G4String* outputFileName)
     analysisManager->SetNtupleMerging(true);
     // Creating ntuple
     analysisManager->CreateNtuple("brem", "dark photon bremsstrahlung in Fe");
-    analysisManager->CreateNtupleIColumn("parentID"); //0
-    analysisManager->CreateNtupleIColumn("pID"); //1
-    analysisManager->CreateNtupleDColumn("p_px"); //2
-    analysisManager->CreateNtupleDColumn("p_py"); //3
-    analysisManager->CreateNtupleDColumn("p_pz"); //4
-    analysisManager->CreateNtupleDColumn("p_kEne"); //5
-    analysisManager->CreateNtupleDColumn("p_Mass"); //6
-    analysisManager->CreateNtupleDColumn("px"); //7
-    analysisManager->CreateNtupleDColumn("py"); //8
-    analysisManager->CreateNtupleDColumn("pz"); //9
-    analysisManager->CreateNtupleDColumn("kEne"); //10
-    analysisManager->CreateNtupleDColumn("pMass"); //11
-    analysisManager->CreateNtupleSColumn("ProcName"); //12
+    analysisManager->CreateNtupleIColumn("Dummy");
+    analysisManager->CreateNtupleIColumn("parentID"); //1
+    analysisManager->CreateNtupleIColumn("pID"); //2
+    analysisManager->CreateNtupleSColumn("ProcName");
+    analysisManager->CreateNtupleDColumn("p_px"); //3
+    analysisManager->CreateNtupleDColumn("p_py"); //4
+    analysisManager->CreateNtupleDColumn("p_pz"); //5
+    analysisManager->CreateNtupleDColumn("p_kinEne"); //6
+    analysisManager->CreateNtupleDColumn("p_Mass"); //7
+    analysisManager->CreateNtupleDColumn("px"); //8
+    analysisManager->CreateNtupleDColumn("py"); //9
+    analysisManager->CreateNtupleDColumn("pz"); //10
+    analysisManager->CreateNtupleDColumn("kinEne"); //11
+    analysisManager->CreateNtupleDColumn("pMass"); //12
     analysisManager->FinishNtuple();
 }
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

@@ -17,23 +17,23 @@ class RunAction;
 
 class EventAction : public G4UserEventAction
 {
-	public:
-		EventAction(/*RunAction* runAction*/);
-		EventAction(RunAction* runAction, DetectorConstruction* detectorConstruction, DarkMatter* darkMatter);
-		~EventAction();
+    public:
+        EventAction(/*RunAction* runAction*/);
+        EventAction(RunAction* runAction, DetectorConstruction* detectorConstruction, DarkMatter* darkMatter);
+        ~EventAction();
 
-		void BeginOfEventAction(const G4Event* event);
-		void EndOfEventAction(const G4Event* event);
-		void SetSteppingAction(SteppingAction* steppingAction) {fSteppingAction = steppingAction;}
-		DarkMatter* GetDarkMatterPointer(){return fDarkMatter;}
-		void CountEmission() {NEmissions++;}
+        void BeginOfEventAction(const G4Event* event);
+        void EndOfEventAction(const G4Event* event);
+        void SetSteppingAction(SteppingAction* steppingAction) {fSteppingAction = steppingAction;}
+        DarkMatter* GetDarkMatterPointer(){return fDarkMatter;}
+        void CountEmission() {NEmissions++;}
 
-	private:
-		RunAction* fRunAction;
-		DetectorConstruction* fDetectorConstruction;
-		SteppingAction* fSteppingAction;
-		DarkMatter* fDarkMatter;
-		G4int NEmissions;
+    private:
+        RunAction* fRunAction;
+        DetectorConstruction* fDetectorConstruction;
+        SteppingAction* fSteppingAction;
+        DarkMatter* fDarkMatter;
+        G4int NEmissions;
 
 };
 
